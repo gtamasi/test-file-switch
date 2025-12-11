@@ -15,7 +15,7 @@ A Neovim plugin to quickly switch between JavaScript/TypeScript source files and
 
 ```lua
 {
-  "username/test-file-switch",
+  "gtamasi/test-file-switch",
   config = function()
     require("test-file-switch").setup()
   end,
@@ -27,7 +27,7 @@ A Neovim plugin to quickly switch between JavaScript/TypeScript source files and
 
 ```lua
 use {
-  "username/test-file-switch",
+  "gtamasi/test-file-switch",
   config = function()
     require("test-file-switch").setup()
   end,
@@ -49,7 +49,7 @@ require("test-file-switch").setup()
 ### Manual Installation
 
 ```bash
-git clone https://github.com/username/test-file-switch \
+git clone https://github.com/gtamasi/test-file-switch \
   ~/.local/share/nvim/site/pack/plugins/start/test-file-switch
 ```
 
