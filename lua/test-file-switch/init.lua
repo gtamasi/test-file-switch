@@ -3,13 +3,10 @@ local switcher = require("test-file-switch.switcher")
 
 local M = {}
 
---- Setup the plugin with user options
----@param opts table|nil User configuration options
+---@param opts table|nil
 function M.setup(opts)
-  -- Initialize configuration
   local options = config.setup(opts)
 
-  -- Register keymap if enabled
   if options.keymap_enabled and options.keymap then
     vim.keymap.set(options.keymap_mode, options.keymap, function()
       switcher.switch()
@@ -19,7 +16,6 @@ function M.setup(opts)
     })
   end
 
-  -- Register user command
   vim.api.nvim_create_user_command("TestFileSwitch", function()
     switcher.switch()
   end, {
@@ -27,11 +23,8 @@ function M.setup(opts)
   })
 end
 
---- Switch between source and test file
---- Exposed for manual keymap setup
 function M.switch()
   switcher.switch()
 end
 
 return M
-
