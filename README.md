@@ -75,11 +75,11 @@ The plugin also provides a command:
 
 #### Switching from source to test
 
-When editing `src/utils/helper.js`, pressing `<leader>fM` opens `tests/src/utils/helper.spec.js`.
+When editing `src/utils/helper.js`, pressing `<leader>fM` opens `test/src/utils/helper.spec.js`.
 
 #### Switching from test to source
 
-When editing `tests/src/utils/helper.spec.js`, pressing `<leader>fM` opens `src/utils/helper.js`.
+When editing `test/src/utils/helper.spec.js`, pressing `<leader>fM` opens `src/utils/helper.js`.
 
 #### Creating a new test file
 
@@ -99,7 +99,7 @@ Confirming creates the file (and any missing directories) and opens it.
 ```lua
 require("test-file-switch").setup({
   -- File switching options
-  test_dir = "tests",           -- Root test directory name
+  test_dir = "test",            -- Root test directory name
   test_suffix = ".spec",        -- Suffix before extension (.spec.js, .spec.ts)
 
   -- Test file creation
@@ -154,17 +154,17 @@ require("test-file-switch").setup({
 
 The plugin maps source files to test files as follows:
 
-| Source File                 | Test File                             |
-| --------------------------- | ------------------------------------- |
-| `src/utils/helper.js`       | `tests/src/utils/helper.spec.js`      |
-| `src/utils/helper.ts`       | `tests/src/utils/helper.spec.ts`      |
-| `lib/components/Button.tsx` | `tests/lib/components/Button.spec.ts` |
-| `index.js`                  | `tests/index.spec.js`                 |
+| Source File                 | Test File                            |
+| --------------------------- | ------------------------------------ |
+| `src/utils/helper.js`       | `test/src/utils/helper.spec.js`      |
+| `src/utils/helper.ts`       | `test/src/utils/helper.spec.ts`      |
+| `lib/components/Button.tsx` | `test/lib/components/Button.spec.ts` |
+| `index.js`                  | `test/index.spec.js`                 |
 
 ## Limitations
 
 - **Supported file types**: Only JavaScript and TypeScript files (`.js`, `.ts`, `.jsx`, `.tsx`)
-- **Test directory location**: Test files must be in a `tests/` directory at the project root
+- **Test directory location**: Test files must be in a `test/` directory at the project root
 - **Naming convention**: Test files must use the `.spec.js` or `.spec.ts` suffix (configurable via `test_suffix`)
 - **No co-located tests**: Does not support test files next to source files (e.g., `Component.test.js` alongside `Component.js`)
 - **Single test directory**: Does not support multiple test directories or custom glob patterns

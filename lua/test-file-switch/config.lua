@@ -3,7 +3,7 @@ local M = {}
 -- Default configuration
 M.defaults = {
   -- File switching options
-  test_dir = "tests",
+  test_dir = "test",
   test_suffix = ".spec",
 
   -- Test file creation
