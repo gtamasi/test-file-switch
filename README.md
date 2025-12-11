@@ -11,7 +11,7 @@ A Neovim plugin to quickly switch between JavaScript/TypeScript source files and
 
 ## Installation
 
-### lazy.nvim (recommended)
+### lazy.nvim
 
 ```lua
 {
