@@ -61,7 +61,7 @@ git clone https://github.com/gtamasi/test-file-switch \
 require("test-file-switch").setup()
 ```
 
-This enables the default keybinding `<leader>tt` to toggle between source and test files.
+This enables the default keybinding `<leader>fM` to toggle between source and test files.
 
 ### Command
 
@@ -75,11 +75,11 @@ The plugin also provides a command:
 
 #### Switching from source to test
 
-When editing `src/utils/helper.js`, pressing `<leader>tt` opens `tests/src/utils/helper.spec.js`.
+When editing `src/utils/helper.js`, pressing `<leader>fM` opens `tests/src/utils/helper.spec.js`.
 
 #### Switching from test to source
 
-When editing `tests/src/utils/helper.spec.js`, pressing `<leader>tt` opens `src/utils/helper.js`.
+When editing `tests/src/utils/helper.spec.js`, pressing `<leader>fM` opens `src/utils/helper.js`.
 
 #### Creating a new test file
 
@@ -107,7 +107,7 @@ require("test-file-switch").setup({
   auto_create = false,          -- Auto-create without prompting (overrides prompt_create)
 
   -- Keymap options
-  keymap = "<leader>tt",        -- Keybinding to toggle
+  keymap = "<leader>fM",        -- Keybinding to toggle
   keymap_mode = "n",            -- Mode for keybinding (normal mode)
   keymap_enabled = true,        -- Whether to register the keymap
 })

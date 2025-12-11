@@ -11,7 +11,7 @@ M.defaults = {
   auto_create = false,
 
   -- Keymap options
-  keymap = "<leader>tt",
+  keymap = "<leader>fM",
   keymap_mode = "n",
   keymap_enabled = true,
 }
